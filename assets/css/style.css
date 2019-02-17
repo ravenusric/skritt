@@ -272,13 +272,13 @@ p {
 
 /* Style the form element with a border around it */
 form {
-    border: 4px solid #24ecfa9a;
+    border: 4px solid rgba(43, 207, 248, 0.822);
   }
   
-  /* Add some padding and a grey background color to containers */
+  /* Add some padding and a baby blue background color to containers */
   .container {
     padding: 20px;
-    background-color: #39e8ffad;
+    background-color:rgba(43, 207, 248, 0.822);
   }
   
   /* Style the input elements and the submit button */
