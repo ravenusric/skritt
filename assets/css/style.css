@@ -252,7 +252,7 @@ p {
 }
 
 #section-c {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.63);
     color: #333;
     padding: 2em;
 }
@@ -404,5 +404,6 @@ form {
         opacity: 0.4;
         
     }
+
 }
 
