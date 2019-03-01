@@ -61,7 +61,7 @@ h1, h2, h3 {
 /* Slideshow container */
 .slideshow-container,
 .slideshow-container2 {
-  max-width: 1000px;
+  max-width: 500px;
   position: relative;
   margin: auto;
   border: 3px solid rgba(243, 66, 234, 0.753);
@@ -405,5 +405,21 @@ form {
         
     }
 
+}
+
+
+@media(max-width: 320px) {
+  #section-d .box {
+    padding: 0em;
+    color: #fff;
+    background-image: linear-gradient(to right bottom, #d16ba580, #d15ca87c, #cf4cb07a, #cb3ab87a, #c427c179,
+     #a251df7c, #746bf479, #1f80ff7a, #00a6ff7a, #00c8ff81, #00e1ff80, #5ffbf185);;
+}
+
+#section-d .box:first-child {
+    background-image: linear-gradient(to right bottom, #d16ba557, #d15ca856, #cf4cb059, #cb3ab856, #c427c157,
+     #a251df57, #746bf454, #1f80ff59, #00a6ff57, #00c8ff60, #00e1ff59, #5ffbf163);;
+
+}
 }
 
