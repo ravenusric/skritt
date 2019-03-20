@@ -61,7 +61,7 @@
                     </li>
                 </ul>
             </div>
-
+            <p class="top">Creative Loafing's Reader's choice for best Rapper in Charlotte,NC.</p>
         </div>
     </header>
 
@@ -69,11 +69,13 @@
     <!------Section A------>
     <section id="section-a" class="grid">
         <div class="content-wrap">
-
-            <!-- Slideshow container -->
+            <iframe class="youTube" width="560" height="315" src="https://www.youtube.com/embed/GERk3m2bPKU" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <!-- Slideshow container -
             <div class="slideshow-container">
 
-                <!-- Full-width images with number and caption text -->
+                <!-- Full-width images with number and caption text 
                 <div class="mySlides1 fade">
                     <div class="numbertext">1 / 4</div>
                     <div class="video-container">
@@ -110,20 +112,20 @@
                     </div>
                 </div>
 
-                <!-- Next and previous buttons -->
+                <!-- Next and previous buttons --
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             <br>
 
-            <!-- The dots/circles -->
+            <!-- The dots/circles --
             <div style="text-align:center">
                 <span class="dot1" onclick="currentSlide(1)"></span>
                 <span class="dot1" onclick="currentSlide(2)"></span>
                 <span class="dot1" onclick="currentSlide(3)"></span>
                 <span class="dot1" onclick="currentSlide(4)"></span>
 
-            </div>
+            </div>-->
 
         </div>
     </section>
@@ -131,75 +133,7 @@
     <!---Section B------>
     <section id="section-b" class="grid">
         <div class="content-wrap">
-            <div class="slideshow-container2">
 
-
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade2">
-                    <div class="numbertext"></div>
-                    <img src="./assets/images/80sskritt.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides fade2">
-                    <div class="numbertext"></div>
-                    <img src="assets/images/enyophase.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides fade2">
-                    <div class="numbertext"></div>
-                    <img src="assets/images/skrittbythebell.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides fade2">
-                    <div class="numbertext"></div>
-                    <img src="assets/images/skrittdarkness.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides fade2">
-                    <div class="numbertext"></div>
-                    <img src="assets/images/skrittwall.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides fade2">
-                    <div class="numbertext"></div>
-                    <img src="assets/images/skrittenyo.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides fade2">
-                    <div class="numbertext"></div>
-                    <img src="assets/images/skrittfannypack.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides fade2">
-                    <div class="numbertext"></div>
-                    <img src="assets/images/sweatdreams.jpg" style="width:100%">
-                    <text>Available Now!</text>
-                </div>
-
-                <div class="mySlides fade2">
-                    <div class="numbertext"></div>
-                    <img src="assets/images/skrittcigs.png" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons 
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
-            </div>
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-                <span class="dot" onclick="currentSlide(6)"></span>
-                <span class="dot" onclick="currentSlide(7)"></span>
-                <span class="dot" onclick="currentSlide(8)"></span>
-                <span class="dot" onclick="currentSlide(9)"></span>
-
-            </div>
         </div>
 
     </section>
@@ -215,7 +149,7 @@
                     data-auto-style="false" data-text-color="#000000" data-link-color="#00b4b3" data-background-color="rgba(0,0,0,0)"
                     data-display-limit="15" data-link-text-color="#FFFFFF" data-display-lineup="true"
                     data-separator-color="rgba(124,124,124,0.25)"></a>-->
-                    
+
                 <!--<script src="//www.powr.io/powr.js?external-type=html"></script>
                 <div class="powr-instagram-feed" id="d7bd538c_1549722898"></div>-->
             </div>
@@ -247,12 +181,47 @@
                     <input type="text" placeholder="Name" name="name" required>
                     <input type="text" placeholder="Email address" name="mail" required>
                     <label>
-                        <input type="checkbox" checked="checked" name="subscribe" style="color:pink"> Daily Newsletter
+                        <input type="checkbox" checked="checked" name="subscribe" style="color:pink"> Monthly Newsletter
                     </label>
                 </div>
 
                 <div class="container">
                     <input type="submit" value="Subscribe">
+                    <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            $('#email').focus();
+                            $('#email').keypress(function (event) {
+                                var email = $('#email').val();
+                                var keyCode = event.keyCode;
+                                if (keyCode == 13) {
+                                    $.ajax({
+                                        type: 'POST',
+                                        url: 'action.php',
+                                        data: { email: email },
+                                        success: function (data) {
+                                            $('#result').hide();
+                                            $('#result').html(data);
+                                            $('#result').fadeIn();
+                                        }
+                                    });
+                                };
+                            });
+                            $('#submit').click(function () {
+                                var email = $('#email').val();
+                                $.ajax({
+                                    type: 'POST',
+                                    url: 'action.php',
+                                    data: { email: email },
+                                    success: function (data) {
+                                        $('#result').hide();
+                                        $('#result').html(data);
+                                        $('#result').fadeIn();
+                                    }
+                                });
+                            });
+                        });
+                    </script>
                 </div>
             </form>
         </div>
